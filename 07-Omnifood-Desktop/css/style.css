@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem #e67d227e;
+}
+
 .grid {
   display: grid;
   gap: 3.2rem;
@@ -24,6 +29,10 @@
 
 .grid-4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .margin-bottom {
@@ -139,7 +148,7 @@ body {
   color: #333;
   margin-bottom: 4.8rem;
 }
-
+.btn,
 .btn:link,
 .btn:visited {
   background-color: #e67e22;
@@ -574,8 +583,6 @@ strong {
   text-align: center;
 }
 
-.feature {
-}
 .feature-text {
   font-size: 1.8rem;
   line-height: 1.8;
@@ -605,12 +612,24 @@ strong {
   grid-template-columns: 2fr 1fr;
   background-image: linear-gradient(to right bottom, #eea564, #e67e22);
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.269);
-  height: 50rem;
+
   border-radius: 9px;
   overflow: hidden;
 }
-.cta-text-box {
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem !important;
 }
+.cta-text-box {
+  color: #45260a;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  margin-bottom: 4.8rem;
+}
+
 .cta-img-box {
   /* background-image: url("../img/eating.jpg");*/
   background-size: cover;
@@ -621,4 +640,130 @@ strong {
       hwb(28 13% 10% / 0.35)
     ),
     url("../img/eating.jpg");
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 10%);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form button {
+  border: none;
+  cursor: pointer;
+  background-color: #45260a;
+  color: #fdf2e9;
+  font-family: inherit;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 10%);
+  align-self: end;
+  padding: 1.2rem;
+  transition: all 0.3s;
+}
+
+.cta-form button:hover {
+  background-color: #fdf2e9;
+  color: #45260a;
+}
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.494);
+}
+
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  padding-top: 9.6rem;
+}
+
+.footer {
+  padding: 9.6rem 0;
+  border-top: 1px solid #eee;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 4rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: #767676;
+  margin-top: auto;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.adress {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #777;
+  transition: all 0.3s;
+}
+
+.footer-link:active,
+.footer-link:hover {
+  color: #555;
 }
