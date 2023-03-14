@@ -101,6 +101,7 @@ below 944px tablets
 
   .btn-mobile-nav {
     display: block;
+    z-index: 1000;
   }
 
   .main-nav {
